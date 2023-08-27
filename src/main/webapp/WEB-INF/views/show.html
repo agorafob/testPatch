@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+
+<h2>Show</h2>
+
+<p th:text="${test.getName()}+','+ ${test.getIsAdult()}+','+ ${test.getId()}">VALUE</p>
+
+<form th:method="PATCH" th:action="@{/test/{id}/release(id=${test.getId()})}">
+<input type="submit" value="Release">
+</form>
+
+<form th:method="PATCH" th:action="@{/test/{id}/isAdult(id=${test.getId()})}">
+    <input type="submit" value="isAdult">
+</form>
+
+</body>
+</html>
